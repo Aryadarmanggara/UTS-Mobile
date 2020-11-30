@@ -65,8 +65,7 @@ const CustomDrawerContent = (props) => {
 const HomeDrawer = ({onSignOut}) => {
   return (
     <Drawer.Navigator  drawerContent={props => <CustomDrawerContent {...props} onSignOut={onSignOut} />} >
-      <Drawer.Screen name="Home" component={HomeTabs} />
-      <Drawer.Screen name="Profile" component={ProfileTabs}/>    
+      <Drawer.Screen name="Home" component={HomeTabs} />  
     </Drawer.Navigator>
   );
 };
