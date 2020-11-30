@@ -8,12 +8,6 @@ const PasswordForgetScreen = ({onSignIn, navigation}) => {
     <View style={styles.container}>
       <Image style = {{width: 350, height: 150}} source={require('./Logo2.jpg')} />
 
-      <TextInput placeholder='Masukan Password Lama Anda' 
-      style = {styles.txtInput} 
-      secureTextEntry={true}/>
-
-      <Text style={{borderBottomWidth: 1, width: 350, marginVertical: 10}}></Text>
-
       <TextInput placeholder='Masukan Password Baru Anda' 
       style = {styles.txtInput} 
       secureTextEntry={true}/>

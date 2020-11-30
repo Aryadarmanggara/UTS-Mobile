@@ -125,12 +125,6 @@ const App = () => {
             )}
           </RootStack.Screen>
           
-          <RootStack.Screen name="{Password Change}">
-              
-            {(props) => (
-              <PasswordForgetScreen {...props} onSignIn={handleSignIn}/>
-            )}
-          </RootStack.Screen>
           
         </>
       )}
