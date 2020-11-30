@@ -100,6 +100,7 @@ const App = () => {
         headerShown: Hshown
       }}
     >
+      
       {isAuthenticated ? (
        <RootStack.Screen name="Home">
        {(props) => (
