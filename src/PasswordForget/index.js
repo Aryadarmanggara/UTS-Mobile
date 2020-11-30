@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from 'reac
  
 
  
-const PasswordForgetScreen = ({onSignIn, navigation}) => {
+const PasswordForgetScreen = () => {
   return (
     <View style={styles.container}>
       <Image style = {{width: 350, height: 150}} source={require('./Logo2.jpg')} />

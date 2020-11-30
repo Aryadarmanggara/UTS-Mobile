@@ -15,7 +15,7 @@ const showAlertHandler = () => {
 
 
 
-const SignUpScreen = ({onSignUp}) => {
+const SignUpScreen = () => {
   return (
     <View style={styles.container}>
       <Image style = {{width: 350, height: 150}} source={require('./Logo2.jpg')} />
