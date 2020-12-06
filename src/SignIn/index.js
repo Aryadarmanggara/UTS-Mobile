@@ -1,24 +1,40 @@
 import React from 'react';
+import react from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Image } from 'react-native';
- 
+import * as firebase from 'firebase';
 
  
 
-const SignInScreen = ({onSignIn, navigation}) => {
+const SignInScreen = ({navigation}) => {
+  const [email,setEmail] = react.useState('');
+  const [password,setPassword] = react.useState('');
+
+  const loginPressed = () => {
+    firebase.auth().signInWithEmailAndPassword(email,password)
+      .then(()=> {
+
+      }).catch((err) => {
+        alert(err.message);
+      })
+  }
   return (
     <View style={styles.container}>
       <Image style = {{width: 350, height: 150}} source={require('./Logo2.jpg')} />
 
       <TextInput placeholder='Email'
       keyboardType='email-address' 
-      style = {styles.txtInput}/>
+      style = {styles.txtInput} 
+      value={email}
+      onChangeText={(text) => {setEmail(text)}}/>
 
       <TextInput placeholder='Password' 
       style = {styles.txtInput} 
-      secureTextEntry={true} />
+      secureTextEntry={true} 
+      value={password}
+      onChangeText={(text) => {setPassword(text)}}/>
 
 
-      <TouchableOpacity style={styles.Btn} onPress={onSignIn}>
+      <TouchableOpacity style={styles.Btn} onPress={loginPressed}>
         <Text style={styles.txtBtn}>Masuk</Text>
       </TouchableOpacity>
 
